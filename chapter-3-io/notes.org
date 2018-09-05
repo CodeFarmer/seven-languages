@@ -1,0 +1,32 @@
+* Like
+
+- everything is right there if you look:
+> $ 
+$ 
+$ Lobby getSlot("exit")
+$ CLI slotNames
+$ CLI prompt := "% "
+
+* Dislike
+
+* Day 1
+
+$ Object slotNames
+  - looks like there's a whole async actor system in there
+
+- if... how do you do else?
+
+- Maps and Lists are mutable (atPut append etc)
+
+- [[https://en.wikibooks.org/wiki/Io_Programming/Io_Style_Guide][Style guide]]
+
+- 0 is truthy
+
+- ::= creates a setter
+
+- foo say := method("moo" println)
+- foo getSlot("say") call
+  - found by 'method proto slotNames' :)
+
+- so far: it's amazing how much you can figure out without reading the
+  docs, once you know about Object, Lobby and slotNames
