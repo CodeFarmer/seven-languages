@@ -1,0 +1,161 @@
+* Chapter 1: Ruby
+
+** Like
+
+- Everything is an expression
+  - Side effect collection methods return the unaltered collection
+
+- Joel's language happy place
+  - Everything is an expression
+  - Literals for useful data structures (at least arrays and hashes)
+  - What was the other one?
+    - Dynamic/duck typing?
+    - Immutable data structures?
+    - First-class functions? (Surely everything has that now)
+
+- Symbols are cool
+  - Though their name is confusing
+  - and they are mostly there because Strings are not interned
+
+- conventions
+  - sub! vs sub
+  - except it's not always true farken
+    - push/pop :(
+
+- Block syntax is pretty intuitive
+- String interpolation is nice
+
+- negative array indices are nice I guess?
+  - but note inconsistency with OOB high, which return nil
+- array slicing using ranges
+- [] and []= are just methods on Array
+
+- Ruby is not taking itself too seriously!
+  - Fun and amusement are goals
+  - Even at the expense of consistency or efficiency
+  - Do what you want in a way you like (this is not quite TMTOWTDI)
+
+** Dislike
+
+- && || works like C, & | does something counterintuitive
+  (non-short-circuit && ||)
+  - If you're going to lean on familiarity like that, then just do it
+- (..) and (...) work the opposite way to what I expect
+
+- Non-interpolated ('') strings don't do escaped characters
+
+- Is begin/end like {/} ?
+  - It's not. The difference is... *rolls dice* operator precedence
+    - Ugh. This can be really important.
+
+- Array.push() is not called Array.push!()
+
+** Day 1
+
+- Pretty nice I guess
+  - $ 10.times { |n| print "Joel\n" } 
+
+** Day 2
+
+- Passing an options map instead of named params is familiar-ish
+  - "Braces are optional for the last parameter in a function"
+    - Delightful whimsy :P
+
+- Convention to use {} vs do/end, DANGER
+  - Does this mean Ruby programmers have common misconceptions about
+    their language?
+
+- 'yield' is another overloaded word from elsewhere
+  - How this really works syntactically is very unclear (default args?)
+  - [ ] TODO RTFM
+
+- class instances are templates?
+  - does that mean what it sounds like?
+
+- class/end, def/end
+
+- "something.rb:5: class/module name must be CONSTANT"
+  - actually this means "you can't have a lower case class name:
+
+- attr_accessors using symbols? not sure how that sugar works
+  - attr vs attr_accessor doesn't do what you would think
+    - attr gives you an accessor. attr_accessor gives you... a setter
+
+- modules seem to be multiple inheritance in a wig
+  - Java's default implementations in interfaces kinda the same
+
+  - use duck typing to access class services
+
+- Aha, Enumerable. Every language has a seq :)
+  - collect() is map() - weird
+    - but map() exists
+    - collect is an alias for map, from SmallTalk
+  - select() is filter() - fair enough
+  - inject() is reduce() (also an alias)
+    - Ruby does a lot of aliasing eh, apparently to be as friendly as possible
+    - it's confusing and enraging - JG
+
+- File::new and File::open are the same
+  - passing the block closes the file for you afterwards
+
+- Nice, Ruby doesn't care about trailing commas
+
+- Can iterate over a has, you get pairs
+- Can call flatten on a hash to get an ordered array
+- arrays: queues, stacks
+
+- can use the splat operator to convert an array to a list of args for Hash[]
+  - Ruby has destructuring as well
+
+- exercise making blocks of 4 numbers - put a variable outside the block scope and mutate it
+  - this seems blecchy
+  - what does Python do?
+  - you can do better with reduce or each_index
+
+- The exercise with building a tree from hashes...
+  - It mentions arrays but doesn't show how to use them
+  - Why not just specify your tree that way and not use the Tree
+    class? visit_all isn't that interesting, just write a recursive
+    map traverse function :P
+
+  - static methods are weird until you realise self has nothing to do
+    with object instances
+  - hey, to_s on an array doesn't call to_s on the contents properly?
+  - and if you don't declare to_s, then array to_s gives you better contents?
+
+** Day 3
+
+- method_missing(name, *args)
+
+  - oh hey, if you override self.methods, you can get it to interact
+    with tab completion 8)
+
+  - in theory instance_methods works but I couldn't make it do what I wanted
+    - does x.methods call X.instance_methods?
+
+  - how do I just add a few things to the array
+    returned by a.methods?
+    - you can just put code straight into the class definition
+    - or put a module self.included
+
+  - respond_to? is its own thing
+    - man, what a hairball
+    - http://phrogz.net/RubyLibs/RubyMethodLookupFlow.pdf
+
+  - if you throw NoMethodError, it calls method_missing again!
+    - does this mean you can't add custom debugging and still have it
+      be an exception?
+
+- once you scratch the surface, there is a *lot* going on
+
+  - and because metaprogramming, it can be hard to know where a
+    behaviour comes from (mixin? method_missing? define_method?), or
+    to find the whole docs for something
+
+  - source diving is essential
+
+- lots of cool toys
+  - ActiveRecord
+  - Object#tap
+
+#+STARTUP: showall

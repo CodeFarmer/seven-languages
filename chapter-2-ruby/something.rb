@@ -6,15 +6,6 @@ module ActsAsCsv
   def self.included(base)
     base.extend ClassMethods
   end
-
-  class CsvRow
-    def initialize(amap)
-      @contents_map = amap
-      define_method :method_missing do |s, &args|
-        @contents_map[s]
-      end
-    end
-  end
   
   module ClassMethods
     def acts_as_csv
