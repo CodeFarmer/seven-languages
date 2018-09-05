@@ -1,11 +1,9 @@
 * Like
 
 - everything is right there if you look:
-> $ 
-$ 
-$ Lobby getSlot("exit")
-$ CLI slotNames
-$ CLI prompt := "% "
+  - Lobby getSlot("exit")
+  - CLI slotNames
+  - CLI prompt := "% "
 
 * Dislike
 
