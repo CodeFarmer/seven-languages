@@ -22,6 +22,10 @@
 
 * Dislike
 
+- The community is gone, and they have left surprisingly few docs. The
+  standard library appears super powerful, but Google hasn't indexed
+  it properly. (https://iolanguage.org/reference/index.html)
+
 - activatables make higher-order functional programming impossible,
   since you can't refer to a method without calling it?
   - wow they really missed that boat
@@ -95,8 +99,7 @@ $ Object slotNames
 - OK, what does this syntax mean? Block(f)
 
 
-Day 2
------
+* Day 2
 
 - Message introspection is powerful but also ubiquitously necessary
 
@@ -121,6 +124,10 @@ Day 2
 
 
 * Day 3
+
+- Finally I notice the library docs (other than what's in Guide and
+  Tutorial, which is what Google finds you.)
+  - https://iolanguage.org/reference/index.html
 
 - OMG I SOLVED THE HIGHER-ORDER FUNCTION THING
   - setIsActivatable is a custom setter that affects the interpreter
