@@ -11,6 +11,9 @@
 
 - the C interface is simple and easy to poke at
 
+- the message thing is consistent and all-powerful, but you actually
+  have to model quite a lot in your head. Maybe it's just practice.
+
 - I disagree about the syntax (it's *not* super clear because simple)
   but the object model is really easy to reason about
 
@@ -127,3 +130,9 @@ Day 2
   state. But did anyone come up with a better way? I have to admit I'd
   kinda run out of "let's look deep inside Io to try and figure out
   some elegant thing which may or may not exist" by now.
+
+- I am still not super happy with the curlyBrackets attribs argument
+  to the Xml builder. It feels like I've almost, but not quite,
+  grasped how the message gets evaluated. The hint that I've screwed
+  up is that I need to add quotes for the value from the Map,
+  but... not for the key?
