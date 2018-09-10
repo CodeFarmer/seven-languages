@@ -122,3 +122,8 @@ Day 2
 - OMG I SOLVED THE HIGHER-ORDER FUNCTION THING
   - setIsActivatable is a custom setter that affects the interpreter
     layer in a way that 'foo isActivatable := false' does not.
+
+- I guess if an XmlBuilder is stateful, it's easy to track the indent
+  state. But did anyone come up with a better way? I have to admit I'd
+  kinda run out of "let's look deep inside Io to try and figure out
+  some elegant thing which may or may not exist" by now.
