@@ -5,6 +5,18 @@
   - CLI slotNames
   - CLI prompt := "% "
 
+- you really can do anything you want
+  - including set fire to both your feet and then swallow the fire
+    extinguisher
+
+- the C interface is simple and easy to poke at
+
+- I disagree about the syntax (it's *not* super clear because simple)
+  but the object model is really easy to reason about
+
+- everything is an actor
+- everything can be a future
+
 * Dislike
 
 - activatables make higher-order functional programming impossible,
@@ -15,18 +27,27 @@
 
   - the interpreter code would have been way simpler!
 
-- if you make a syntax error pretty much anywhere, even in a simple
-  control structure, you are *screwed*
+  - NOTE but see below, setIsActivatable(false) switches it off
 
-- semicolons. Sometimes. And if you miss one, the result will not be
-  what you think. The lack of syntax (unlike lisp) leads to ambiguity
-  and simple mistakes, which the error messages don't help you figure
-  out (assuming there is an error message).
-  - Actually there is *more* syntax than Lisp, and it leads to
-    inconsistency (semicolon again)
+- syntax
+
+  - if you make a syntax error pretty much anywhere, even in a simple
+    control structure, you are *screwed*
+
+  - semicolons. Sometimes. And if you miss one, the result will not be
+    what you think. The lack of syntax (unlike lisp) leads to ambiguity
+    and simple mistakes, which the error messages don't help you figure
+    out (assuming there is an error message).
+    - Actually there is *more* syntax than Lisp, and it leads to
+      inconsistency (semicolon again)
+
+  - the variable arguments behaviour makes everything worse
 
 - like Ruby, all the data structures are mutable (except when they're
   not).
+
+- was anyone else's interpreter crashy? it might have been the Emacs
+  inferior mode.
 
 * Day 1
 
@@ -88,7 +109,7 @@ Day 2
   and pure functions :P
 
 - This is definitely a toy. It's a cool toy, but it's a toy, missing
-  too much that would aid dev productivity.
+  much that would aid dev productivity.
 
 - Serialization/deserialization:
 
@@ -96,3 +117,8 @@ Day 2
   - m := doRelativeFile("m.ser")
 
 
+* Day 3
+
+- OMG I SOLVED THE HIGHER-ORDER FUNCTION THING
+  - setIsActivatable is a custom setter that affects the interpreter
+    layer in a way that 'foo isActivatable := false' does not.
