@@ -7,6 +7,27 @@
 
 * Dislike
 
+- activatables make higher-order functional programming impossible,
+  since you can't refer to a method without calling it?
+  - wow they really missed that boat
+  - you can kind of wrap a method def in a Block() though, still a bit
+    crap
+
+  - the interpreter code would have been way simpler!
+
+- if you make a syntax error pretty much anywhere, even in a simple
+  control structure, you are *screwed*
+
+- semicolons. Sometimes. And if you miss one, the result will not be
+  what you think. The lack of syntax (unlike lisp) leads to ambiguity
+  and simple mistakes, which the error messages don't help you figure
+  out (assuming there is an error message).
+  - Actually there is *more* syntax than Lisp, and it leads to
+    inconsistency (semicolon again)
+
+- like Ruby, all the data structures are mutable (except when they're
+  not).
+
 * Day 1
 
 $ Object slotNames
@@ -28,3 +49,50 @@ $ Object slotNames
 
 - so far: it's amazing how much you can figure out without reading the
   docs, once you know about Object, Lobby and slotNames
+
+- Sneaky attempt: slot references within methods point to the owner of
+  the slot's other slots, not slots on the method
+
+- How do I create a callable object?
+  - Hmm, looks like although method() appears to just clone Block,
+  that's not true.
+  - are there limits to "everything is off limits"?
+  - implementing a call() slot isn't enough
+  - Coroutine exists, so it has to be possible
+  - isActivatable actually calls a C func, overwriting it does not
+    change the interpreter behaviour which still calls the same func
+    - this is disappointing
+  - method and coroutine both set it in the C layer, Block sets it to 0
+
+- Related: you call an activatable object every time you refer to
+  it. So how can you refer to it without calling? They literally killed
+  functional programming by adding a feature.
+
+- OK, what does this syntax mean? Block(f)
+
+
+Day 2
+-----
+
+- Message introspection is powerful but also ubiquitously necessary
+
+- List has flatten()
+- spent a while fighting with the lack of syntax errors
+  - with great power comes great annoyance
+
+- "I just spent half an hour trying to figure out why my local
+  variable assignment seemed to be going to the wrong scope, actually
+  I'd forgotten a semicolon."
+
+- comes from not distinguishing between things done for side effects
+  and pure functions :P
+
+- This is definitely a toy. It's a cool toy, but it's a toy, missing
+  too much that would aid dev productivity.
+
+- Serialization/deserialization:
+
+  - File with("m.ser") open write(m serialized) close
+  - m := doRelativeFile("m.ser")
+
+
