@@ -3,20 +3,43 @@
 * Dislike
 
 - \+ for "not" gahh
+- ; for logical-or
 
 * Day 1
 
 - Using SWI Prolog on Mac
-  - SOme things are different, but it's OK so far
+  - Some things are different, but it's OK so far
+  - 'a' for "all solutions" doesn't work
+  - looking at the manual, looks like there's a lot more going on here
+    than just a database thingy. Coroutines, TTY interface calls,
+    JSON, HTTP...
+  - Machine Learning tutuorial
+  - PlDoc!!!
 
 - Error reporting takes some getting used to but it works
 
 - So far not clear on "writing facts" vs "querying facts", they look
   the same syntactically...
+  - they are the same
+  - consult(...) vs query execution
+    - see also listing(...)
 
 - Have only typed := instead of :- about a dozen times in the first hour
+  - "Full stop in clause-body?  Cannot redefine ,/2"
+
+- colouring(Alabama, Mississippi, Georgia, Tennessee, Florida).
+
+- "An Interview With Brian Tarbox, Dolphon Researcher".
+  - Hahahahahahahaha
+  - Can't tell you where the overconstraint is or offer partial
+    solution
+
+- Didn't do the exercises as they were the same as the examples (maybe
+  not expected to do the xamples interactively?)
 
 * Day 2
+
+- Oh hooray, recursive lists. And we're back in my LISPy comfort zone :)
 
 * Day 3
 
