@@ -2,7 +2,19 @@
 
 * Dislike
 
+- \+ for "not" gahh
+
 * Day 1
+
+- Using SWI Prolog on Mac
+  - SOme things are different, but it's OK so far
+
+- Error reporting takes some getting used to but it works
+
+- So far not clear on "writing facts" vs "querying facts", they look
+  the same syntactically...
+
+- Have only typed := instead of :- about a dozen times in the first hour
 
 * Day 2
 
