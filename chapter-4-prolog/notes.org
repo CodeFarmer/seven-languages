@@ -1,5 +1,8 @@
 * Like
 
+- List destructuring is familiar territory
+- TCO
+
 * Dislike
 
 - \+ for "not" gahh
@@ -40,6 +43,29 @@
 * Day 2
 
 - Oh hooray, recursive lists. And we're back in my LISPy comfort zone :)
+
+- Tail recursion!
+  - Why does he point out declarative languages?
+
+- Lists and Tuples
+  - Hey it's got list literals, we can be friends
+  - Oh and you can head|tail destructure them. Now we are really friends.
+    - And you can nest destructurings :)
+      - [a, b, c, d] = [a|[B | CD]]
+      - interesting you can do things other than just 'head'
+        - [a, b, c, d] = [A, B | T]
+
+- Aha, it has the "don't care" variable _
+
+- interesting. "is" vs "="
+  - X = 0+1+1+1+1.
+  - X = 4.
+
+  - unification blows the stack a lot, using "is" is like a shortcut?
+    - hmm.
+
+- Once you get your head around putting variables in to get results
+  out, all the recursive list rule stuff is very straightforward.
 
 * Day 3
 
