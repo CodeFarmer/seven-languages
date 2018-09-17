@@ -19,4 +19,24 @@ hanoi_move(N, Source, Dest, Other, Moves) :-
     append(LMoves, [(Source, Dest) | RMoves], Moves),
     hanoi_move(M, Other, Dest, Source, RMoves).
 
-	       
+% listy things
+
+reverse_list([], []).
+reverse_list([H | T], R) :- reverse(T, TR), append(TR, [H], R).
+
+smallest([H|[]], H).
+smallest([H|T], H) :- smallest(T, X), H < X.
+smallest([H|T], X) :- smallest(T, X), H >= X.
+
+% insertion sort
+
+isort(Thing, [], [Thing]).
+isort(Thing, [H | T], [Thing , H | T]) :- Thing < H.
+isort(Thing, [H | T], [H | SortedTail]) :- Thing >= H, isort(Thing, T, SortedTail).
+isort([], []).
+isort([H | T], Sorted) :- isort(T, SortedT),
+			  isort(H, SortedT, Sorted).
+			  
+% quicksort! do iiiiit.
+
+

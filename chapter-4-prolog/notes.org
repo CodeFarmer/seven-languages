@@ -71,3 +71,11 @@
 
 * Day 3
 
+- Problems with 'not':
+  - Absence of evidence/evidence of absence
+    - Infinite time attempting to prove the not-thing
+  - Might not be able to prove X, so 'not-X' is not true but not all
+    information is there.
+  - 'not' vs '\+' (not-provable)
+
+- See also arithmetic comparison
