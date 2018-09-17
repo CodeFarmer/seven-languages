@@ -1,4 +1,5 @@
 
+
 fib(0, 1).
 fib(1, 1).
 % this one blows the stack. why?
@@ -9,3 +10,13 @@ factorial(1, 1).
 % factorial(X, Y) :- factorial(X - 1, Z), Y = X * Z.
 factorial(X, Y) :- X1 is X - 1, factorial(X1, Z), Y is X * Z.
 
+% three-tower Hanoi
+
+hanoi_move(1, Source, Dest, _, Moves) :- Moves = [(Source, Dest)].
+hanoi_move(N, Source, Dest, Other, Moves) :-
+    M is N - 1,
+    hanoi_move(M, Source, Other, Dest, LMoves),
+    append(LMoves, [(Source, Dest) | RMoves], Moves),
+    hanoi_move(M, Other, Dest, Source, RMoves).
+
+	       

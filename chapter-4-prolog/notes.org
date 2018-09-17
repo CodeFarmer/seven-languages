@@ -67,5 +67,7 @@
 - Once you get your head around putting variables in to get results
   out, all the recursive list rule stuff is very straightforward.
 
+- Prolog is used in NLP to express parse rules in Watson!
+
 * Day 3
 
