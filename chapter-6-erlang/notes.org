@@ -1,0 +1,27 @@
+* Like
+
+- Super good Emacs integration
+  - M-x erlang-shell out of the box
+
+- List literals, tuples and atoms are always nice
+- since the book, Erlang has gained map literals too
+
+* Dislike
+
+- Oh my God the error messages
+  - It's like Prolog but without the conceptual lens
+
+- Associative arrays as lists of pairs is so oldskool
+  - modern Erlang has sorted this out: #[ 1 => 2 , a => 4 ]
+  - Common Lisp :P
+
+* Day 1
+
+- the pattern of having a type atom at the beginning of a tuple is interesting
+- Taily goodness
+
+* Day 2
+
+
+* Day 3
+
