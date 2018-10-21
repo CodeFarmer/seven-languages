@@ -12,6 +12,12 @@
 - Oh my God the error messages
   - It's like Prolog but without the conceptual lens
   - "Bad function arity" when you mean "you forgot the list around the exports"
+  - "head mismatch" when you mean "looks like you're matching in the wrong arity"
+    - or, even better, "you had a capitalization typo in the function name"
+  - "call to local/imported function isWordChar/1 is illegal in guard"
+
+- Calling functions in guards is illegal and I don't even care why
+  - http://erlang.org/pipermail/erlang-questions/2010-December/054862.html
 
 - Associative arrays as lists of pairs is so oldskool
   - modern Erlang has sorted this out: #[ 1 => 2 , a => 4 ]
@@ -34,13 +40,16 @@
 - hey, looks like the error messages have goten better since publication
 
 - the pattern of having a type atom (symbol) at the beginning of a tuple is interesting
-- Taily goodness
+- heady taily goodness
+  - the fancy variants are nice
 
 - The binary packing/unpacking in a pattern match thing is neat I
   guess, but maybe I'm missing something?
   - The REPL representations are baffling
 
 - exporting things by arity :-/
+
+- tail recursion FTW
 
 * Day 2
 
