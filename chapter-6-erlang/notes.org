@@ -26,6 +26,13 @@
 - exporting things by arity
   - unless you can just not do that?
 
+- final clauses in if and case can't have semicolon
+  - this is a specific form of the List Syntax wart
+    - Python gets this right
+    - Clojure gets this super right
+
+- GTE is >=. Guess what LTE is?
+
 * Day 1
 
 - List magically becoming a string when it's got ascii values - does
@@ -52,6 +59,28 @@
 - tail recursion FTW
 
 * Day 2
+
+- Really on the fence about guards. I think I'd rather return nil or something.
+  - Does Erlang have nil?
+  - It has undefined
+
+- Yay, fun().
+  - Also I hate 'end'. Sorry Ruby but it's true.
+
+- Immutable list construction using the same syntax for matching is pretty nice
+
+- Remember that list comprehensions with multiple clauses are kind of
+  a Cartesian product
+  - but multiple clauses with the same variable can filter *or* combine
+
+- You can (immutably) grow a tuple :)
+  - erlang:append_element({1,2,3}, 4)
+
+- My answer to the bonus question was amusing but not-quite-working,
+  all representations of 'empty' I could think of also matched. And
+  the question was not interesting enough to continue with when there
+  was day 3 beckoning.
+  - FIXME come back and do this if there's time.
 
 
 * Day 3
