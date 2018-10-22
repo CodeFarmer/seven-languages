@@ -85,3 +85,13 @@
 
 * Day 3
 
+- I quite like this.
+
+- [ ] what is the single-quote thing? 'EXIT'
+
+- register(Name, Pid) and whereis(Name)
+- exit(normal)
+
+- compare monitor(process, Pid) to link(Pid)
+
+
