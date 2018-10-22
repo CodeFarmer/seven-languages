@@ -12,6 +12,7 @@
 - Oh my God the error messages
   - It's like Prolog but without the conceptual lens
   - "Bad function arity" when you mean "you forgot the list around the exports"
+    - I did this literally every single new module I wrote
   - "head mismatch" when you mean "looks like you're matching in the wrong arity"
     - or, even better, "you had a capitalization typo in the function name"
   - "call to local/imported function isWordChar/1 is illegal in guard"
@@ -94,4 +95,11 @@
 
 - compare monitor(process, Pid) to link(Pid)
 
+- Self-study:
+
+  - OTP servive that will restart a process if it dies
+    - http://erlang.org/doc/man/supervisor.html
+  - Documentation for building a simple OTP server
+    - http://erlang.org/doc/design_principles/des_princ.html
+    - http://erlang.org/doc/design_principles/gen_server_concepts.html
 
