@@ -69,7 +69,6 @@
 
 - Prolog is used in NLP to express parse rules in Watson!
 
-* Day 3
 
 - Problems with 'not':
   - Absence of evidence/evidence of absence
@@ -79,3 +78,25 @@
   - 'not' vs '\+' (not-provable)
 
 - See also arithmetic comparison
+
+- if/else, what's the way to do it other than multiple thingies?
+  - what's the word for "thingies"?
+
+- Looks like you need to define a recurision endpoint for each arity?
+  - Pretty sure I am being dumb here, is this a consequence of something..?
+  - Is this related to the clause ordering thing?
+
+- Oh yeah, clause order mattering. I has it.
+
+- Also don't get trapped in Wikipedia using prolog as a starting point.
+  - Defeasible reasoning
+  - Transaction logic
+
+* Day 3
+
+- Why does my all_in_domain only work if the caller has already
+  use_library(clpfd) first. And if it's failed once, it always
+  fails. I dunno. Could just be a swipl thing.
+
+- Concepts, methods and (something) of programming
+  - van roy
