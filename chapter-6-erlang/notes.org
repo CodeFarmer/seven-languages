@@ -7,6 +7,10 @@
 - since the book, Erlang has gained map literals too
   #{ a => 1, b => 2 }
 
+- built in tail recursion everywhere
+
+- documentation is very consistent/highly conventioned
+
 * Dislike
 
 - Oh my God the error messages
@@ -22,10 +26,11 @@
 
 - Associative arrays as lists of pairs is so oldskool
   - modern Erlang has sorted this out: #[ 1 => 2 , a => 4 ]
-  - Common Lisp :P
+  - to be fair, Common Lisp :P
 
 - exporting things by arity
   - unless you can just not do that?
+  - maybe this is actually good
 
 - final clauses in if and case can't have semicolon
   - this is a specific form of the List Syntax wart
@@ -103,3 +108,15 @@
     - http://erlang.org/doc/design_principles/des_princ.html
     - http://erlang.org/doc/design_principles/gen_server_concepts.html
 
+- Behaviours are kind of like... interfaces or partial abstract
+  classes? You implement the interface bit (the callback functions)
+  and you get the generic bit for free?
+
+- Server state is maintained by passing updated versions of immutable
+  objects to successive tail calls
+
+- Being able to pass modules as function arguments and then just use
+  the call syntax is neat
+  - Mod:Name(Args)
+
+- oh hey, length(registered()) = 22 out of the box.
