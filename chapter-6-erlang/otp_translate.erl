@@ -3,6 +3,7 @@
 -export([handle_call/3,
 	 handle_cast/2,
 	 handle_info/2,
+	 start_link/0,
          init/1]).
 
 
@@ -31,6 +32,8 @@ handle_cast(Request, _) ->
 handle_info(Info, _) ->
     handle_noreply(Info).
 
+start_link() ->
+    gen_server:start_link(otp_translate, [], []).
 
 init(_) ->
     io:format("otp_translate: init(_)~n"),
