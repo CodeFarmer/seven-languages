@@ -4,6 +4,14 @@
 
 * Dislike
 
+- Having to import anything from defrecord/deftype explicitly, even from required namespaces
+- Having to convert dashes to underscores in import (though not require)
+- To sum up, this sucks:
+  - (ns chapter-7-clojure.day2-test
+    (:require [clojure.test :refer :all]
+              [chapter-7-clojure.day2 :refer :all])
+    (:import  [chapter_7_clojure.day2 Thing]))
+
 * Day 1
 
 - Rationals as a data type
@@ -34,4 +42,33 @@
   take off, but there is now a JavaScript version that is huge.
 
 * Day 2
+
+- Loop/recur
+  - "Clojure does not support implicit tail recursion optimization
+    because of limitations of the JVM"
+    - I have never fully grokked why this is
+    - [ ] TODO look this discussion up
+  - Fortunately you don't have to use recur very much
+
+- Macros? In years of Clojure I have written about four.
+
+- (some) doesn't work precisely how it seems...
+  - (some #(if (number? %) true %) [:one 2 3 4])
+    - :one
+
+- list comprehensions (for)
+
+- It's not obvious in the chapter that everything is immutable, which
+  seems like a really important thing to bring up here.
+
+- laziness
+
+- defrecord
+  - now has deftype to compete with it
+  - I have almost never used this, or defprotocol
+
+- macros
+  - I have also almost never used these
+
+
 * Day 3
