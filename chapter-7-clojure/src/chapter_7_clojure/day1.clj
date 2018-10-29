@@ -8,4 +8,5 @@
   (cond
     (list?   coll) :list
     (vector? coll) :vector
-    (map?    coll) :map))
+    (map?    coll) :map
+    :else nil))
