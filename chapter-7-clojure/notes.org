@@ -1,0 +1,37 @@
+* Like
+
+- Expressive literals - list, vector, map, set
+
+* Dislike
+
+* Day 1
+
+- Rationals as a data type
+- All of the literals
+
+- sequences
+
+- cons and conj, list vs vector
+  - difference between (conj [2 3 4] 1) and (conj '(2 3 4) 1)
+
+- almost everything is a function
+  - vectors, maps, sets, even keywords
+
+- convenience
+  - sorted-set, hash-set, vector, list constructor functions
+
+- destructuring is awesome
+
+- yeah but what *is* a reader macro?
+
+- Rich Hickey wrote Clojure because he wanted a language to code in
+  - this is not always an obvious reason
+
+- Clojure is so much easier to use than Common Lisp
+  - less austere, more expressive out of the box
+
+- Interesting: Since the book, the CLR (dotnet) dialect didn't really
+  take off, but there is now a JavaScript version that is huge.
+
+* Day 2
+* Day 3
