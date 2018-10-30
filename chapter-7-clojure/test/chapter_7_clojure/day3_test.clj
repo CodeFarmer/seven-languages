@@ -15,6 +15,8 @@
     (is (= 0 (account-balance (new-account))))))
 
 
+;; bank account thingy
+
 (deftest credit-test
   
   (testing "crediting a new account returns the new balance"
@@ -36,3 +38,15 @@
     (let [n (new-account)]
       (credit-account n 50)
       (is (= 30 (debit-account n 20))))))
+
+
+;; sleeping barber
+
+(deftest customer-arrival-test
+  (testing "arriving customers increment the waiting room"
+    (is (= 0 @waiting-room))
+    (customer-arrives!)
+    (is (= 1 @waiting-room)))
+  (testing "arriving customers only increment the waiting room until it has three people"
+    (dotimes [_ 4] (customer-arrives!))
+    (is (= 3 @waiting-room))))
