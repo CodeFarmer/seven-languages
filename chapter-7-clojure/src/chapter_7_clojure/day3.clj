@@ -40,8 +40,7 @@
   (loop [remaining-customers @waiting-room
          c count]
 
-    (println "Barber: " c)
-    
+    ; (println "Barber: " c)
     (if (> remaining-customers 0)
       (do
         (dosync
