@@ -72,3 +72,19 @@
 
 
 * Day 3
+
+- I suspect that day 3 is full of things that ended up being fairly obscure in modern Clojure
+
+- STM stuff
+  - ref
+  - atom
+  - agent
+  - future
+
+  - all of this is interesting but it's mostly not used by anyone
+    - partly it's because it's relatively easy to avoid state altogether
+
+- multimethods are actually really useful
+
+- it's a pity core.async wasn't around when the book was written, it's
+  a much cooler way of thinking about concurrency in Clojure
