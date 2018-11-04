@@ -1,0 +1,25 @@
+* Like
+
+- syntactically significant indentation FTW
+- if is an expression, not a statement
+
+* Dislike
+
+- It has the list comma thing
+
+* Day 1
+
+- The IO action ‘main’ is not defined in module ‘Main’
+  - it's a FAQ though
+
+- factorial(50000) is blazing fast
+  - factorial(5000) is instantaneous
+
+- guards... not sure what I think about those, but do they help with thinking about Erlang?
+
+- _ for "don't care" seems to be universal
+
+* Day 2
+
+* Day 3
+
