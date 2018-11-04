@@ -3,6 +3,8 @@
 - syntactically significant indentation FTW
 - if is an expression, not a statement
 
+- like Erlang, structuring and destructuring are symmetrical
+
 * Dislike
 
 - It has the list comma thing
@@ -18,6 +20,20 @@
 - guards... not sure what I think about those, but do they help with thinking about Erlang?
 
 - _ for "don't care" seems to be universal
+
+- passing accumulators around in tuples is idiomatic?
+  - the Clojure multi-arg loop is analogous, but somehow nicer to me
+
+- (h:t)
+
+- lists being homogeneous
+  - can't add a String to a list if Ints
+  - but if you add a float to a list of ints, you get a *list of floats*
+  - would have been cooler to expand the type of a new list to literally anything
+    - maybe not possible mathematically to find the "smallest enclosing type" like that?
+
+- list comprehensions don't have to just comprehend lists
+  - take 5 [x*2 | x <- [1..]]
 
 * Day 2
 
